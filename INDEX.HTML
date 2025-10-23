@@ -1,263 +1,280 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCycle | Medical Waste Sustainability Solutions</title>
-<link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <script>
-      tailwind.config = {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MediCycle — Medical waste sustainability solutions: biodegradable gloves, eco-bricks, sterilization and reprocessing systems for hospitals." />
+  <title>MediCycle | Medical Waste Sustainability Solutions</title>
+
+  <!-- Tailwind config MUST come before the Tailwind CDN script when using the CDN -->
+  <script>
+    tailwind = {
+      config: {
         darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              primary: {
-                500: '#2e7d32',
-              },
-              secondary: {
-                500: '#689f38',
-              },
-              accent: {
-                500: '#8bc34a',
-              }
-}
+              primary: { 500: '#2e7d32' },
+              secondary: { 500: '#689f38' },
+              accent: { 500: '#8bc34a' }
+            }
           }
         }
       }
-    </script>
+    }
+    // For the CDN, some setups use window.tailwindConfig — adjust if necessary.
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Feather icons (one include) -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Vanta backgrounds -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
 </head>
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
-<custom-navbar></custom-navbar>
-    
-    <main class="flex-grow">
-      <!-- Introduction Section -->
-      <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center">Enhancing <span class="text-primary-500">Medical Waste</span> Sustainability</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center leading-relaxed">
-Hospitals have embraced sustainability through energy-efficient systems and reusable medical supplies, yet healthcare facilities across the UAE still generate around 21.5 tons of medical waste daily, with Abu Dhabi alone contributing approximately 12 tons per day. Much of this waste, including single-use gloves, masks, and PPE, remains non-biodegradable and ends up in landfills, posing significant environmental and health risks.
-            </p>
-            <p class="text-lg text-gray-600 text-center leading-relaxed">
-              Our project builds on existing initiatives by exploring innovative solutions to reduce, reuse, and better manage hospital medical waste. Through this, we aim to enhance sustainability in healthcare while protecting both patients and our planet.
-            </p>
+  <!-- Ensure <custom-navbar> is defined in your JS; otherwise replace with normal nav markup -->
+  <custom-navbar></custom-navbar>
+
+  <main class="flex-grow" role="main">
+    <!-- Introduction Section -->
+    <section class="py-16 bg-gray-50" aria-labelledby="intro-heading">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 id="intro-heading" class="text-3xl font-bold mb-8 text-center">
+            Enhancing <span class="text-primary-500">Medical Waste</span> Sustainability
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 text-center leading-relaxed">
+            Hospitals have embraced sustainability through energy-efficient systems and reusable medical supplies, yet healthcare facilities across the UAE still generate around 21.5 tons of medical waste daily. [replace with final copy]
+          </p>
+          <p class="text-lg text-gray-600 text-center leading-relaxed">
+            Our project builds on existing initiatives by exploring innovative solutions to reduce, reuse, and better manage hospital medical waste. Through this, we aim to enhance sustainability in [replace with final copy]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section (Vanta background) -->
+    <section class="relative overflow-hidden" id="vanta-bg" style="background: #ffffff;">
+      <div class="container mx-auto px-6 py-24 z-10 relative flex justify-center items-center">
+        <div class="max-w-3xl text-center">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-800">
+            Medical Waste <span class="text-primary-500">Sustainability</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 mb-8">Transforming medical waste into sustainable resources</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="#facts" class="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition duration-300">Learn More</a>
+            <a href="#solutions" class="px-8 py-3 bg-secondary-500 hover:bg-secondary-600 text-white rounded-lg font-medium transition duration-300">Our Solutions</a>
           </div>
         </div>
-      </section>
-      <!-- Hero Section -->
-      <section class="relative overflow-hidden hovered-element" id="vanta-bg" style="background: rgb(255, 255, 255);">
-        <div class="container mx-auto px-6 py-24 z-10 relative flex justify-center items-center hovered-element">
-          <div class="max-w-3xl text-center">
-<h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-800 hovered-element">Medical Waste <span class="text-primary-500">Sustainability</span></h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8">Transforming medical waste into sustainable resources</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<a href="#facts" class="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition duration-300">Learn More</a>
-              <a href="#solutions" class="px-8 py-3 bg-secondary-500 hover:bg-secondary-600 text-white rounded-lg font-medium transition duration-300">Our Solutions</a>
+      </div>
+    </section>
+
+    <!-- Medical Waste Facts Section -->
+    <section id="facts" class="py-20 bg-gray-50" aria-labelledby="facts-heading">
+      <div class="container mx-auto px-6">
+        <h2 id="facts-heading" class="text-3xl font-bold mb-12 text-center">Medical Waste <span class="text-primary-500">Facts</span></h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
+            <div class="text-secondary-500 mb-4 group-hover:text-green-600">
+              <i data-feather="activity" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">5.9 Million Tons</h3>
+            <p class="text-gray-300 group-hover:text-gray-700">US hospitals generate about 5.9 million tons of biohazardous waste annually.</p>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
+            <div class="text-secondary-500 mb-4 group-hover:text-green-600">
+              <i data-feather="alert-triangle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">25% Single-Use</h3>
+            <p class="text-gray-300 group-hover:text-gray-700">25% of hospital waste is single-use plastic packaging and devices.</p>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
+            <div class="text-secondary-500 mb-4 group-hover:text-green-600">
+              <i data-feather="droplet" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">1 Million Tons</h3>
+            <p class="text-gray-300 group-hover:text-gray-700">1 million tons of non-hazardous medical plastic waste could be recycled annually.</p>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
+            <div class="text-secondary-500 mb-4 group-hover:text-green-600">
+              <i data-feather="shield" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">300% Increase</h3>
+            <p class="text-gray-300 group-hover:text-gray-700">Medical plastic waste increased 300% during the COVID-19 pandemic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-white" aria-labelledby="solutions-heading">
+      <div class="container mx-auto px-6">
+        <h2 id="solutions-heading" class="text-3xl font-bold mb-12 text-center">Our <span class="text-primary-500">Solutions</span></h2>
+
+        <div class="max-w-4xl mx-auto mb-16 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-primary-500 transition-all duration-300">
+            <h3 class="text-2xl font-semibold mb-4">Biodegradable Gloves</h3>
+            <p class="text-gray-600">Our innovative biodegradable nitrile gloves decompose within 1-5 years instead of 100+ years, while meeting all medical safety standards (EN 455, EN 374). These [replace with final copy]</p>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold text-primary-500 mb-2">The Problem</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>21.5 tons of daily medical waste in UAE hospitals</li>
+                  <li>Single-use gloves take 100+ years to decompose</li>
+                  <li>Major contributor to long-term landfill pollution</li>
+                </ul>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold text-primary-500 mb-2">Our Solution</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Biodegradable gloves degrade in 1-5 years</li>
+                  <li>81-90% biodegradation in 490 days (ASTM D5526)</li>
+                  <li>Maintains EN 455, EN 374, AQL 1.5 standards</li>
+                </ul>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold text-primary-500 mb-2">UAE-Specific Benefits</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Works in UAE's hot, dry landfill conditions</li>
+                  <li>Future integration with date palm biopolymers</li>
+                  <li>Supports UAE Vision 2030 sustainability goals</li>
+                </ul>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold text-primary-500 mb-2">Strategic Impact</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Reduces long-term landfill impact</li>
+                  <li>No workflow changes needed</li>
+                  <li>Potential local supply chain development</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-8 bg-green-50 p-6 rounded-xl border border-green-200">
+              <h4 class="font-bold text-primary-500 mb-3 text-center">Alignment with UAE Vision 2030 &amp; UN SDGs</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                  <h5 class="font-semibold text-green-700 mb-2">UAE Vision 2030</h5>
+                  <p class="text-sm text-gray-600">Supports sustainability goals, waste reduction, and local innovation initiatives</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                  <h5 class="font-semibold text-green-700 mb-2">SDG 12</h5>
+                  <p class="text-sm text-gray-600">Responsible consumption and production through biodegradable alternatives</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                  <h5 class="font-semibold text-green-700 mb-2">SDG 13</h5>
+                  <p class="text-sm text-gray-600">Climate action by reducing long-term plastic pollution in landfills</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Medical Waste Facts Section -->
-      <section id="facts" class="py-20 bg-gray-50">
-<div class="container mx-auto px-6">
-          <h2 class="text-3xl font-bold mb-12 text-center">Medical Waste <span class="text-primary-500">Facts</span></h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
-<div class="text-secondary-500 mb-4 group-hover:text-green-600">
-                <i data-feather="activity" class="w-10 h-10"></i>
+
+        <!-- Detailed / Other Solutions (unique ID used) -->
+        <section id="more-solutions" class="py-20 bg-white" aria-labelledby="more-solutions-heading">
+          <div class="container mx-auto px-6">
+            <h2 id="more-solutions-heading" class="text-3xl font-bold mb-12 text-center">Other <span class="text-primary-500">Solutions</span></h2>
+
+            <div class="max-w-4xl mx-auto mb-16 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-primary-500 transition-all duration-300">
+                <h3 class="text-2xl font-semibold mb-4">Eco Bricks</h3>
+                <p class="text-gray-600">Our innovative eco bricks transform non-hazardous medical plastic waste into durable construction materials. By sterilizing and compressing medical packaging waste [replace with final copy]</p>
               </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">5.9 Million Tons</h3>
-              <p class="text-gray-300 group-hover:text-gray-700">US hospitals generate about 5.9 million tons of biohazardous waste annually.</p>
-</div>
-            
-            <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
-              <div class="text-secondary-500 mb-4 group-hover:text-green-600">
-                <i data-feather="alert-triangle" class="w-10 h-10"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">25% Single-Use</h3>
-              <p class="text-gray-300 group-hover:text-gray-700">25% of hospital waste is single-use plastic packaging and devices.</p>
-</div>
-            
-            <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
-              <div class="text-secondary-500 mb-4 group-hover:text-green-600">
-                <i data-feather="droplet" class="w-10 h-10"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">1 Million Tons</h3>
-              <p class="text-gray-300 group-hover:text-gray-700">1 million tons of non-hazardous medical plastic waste could be recycled annually.</p>
-</div>
-            
-            <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-green-100 hover:scale-105 group">
-              <div class="text-secondary-500 mb-4 group-hover:text-green-600">
-                <i data-feather="shield" class="w-10 h-10"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-green-800">300% Increase</h3>
-              <p class="text-gray-300 group-hover:text-gray-700">Medical plastic waste increased 300% during COVID-19 pandemic.</p>
-</div>
-</div>
-        </div>
-      </section>
-<!-- Solutions Section -->
-      <section id="solutions" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-          <h2 class="text-3xl font-bold mb-12 text-center">Our <span class="text-primary-500">Solutions</span></h2>
-          
-          <div class="max-w-4xl mx-auto mb-16 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-primary-500 transition-all duration-300">
-              <h3 class="text-2xl font-semibold mb-4">Biodegradable Gloves</h3>
-              <p class="text-gray-600">Our innovative biodegradable nitrile gloves decompose within 1-5 years instead of 100+ years, while meeting all medical safety standards (EN 455, EN 374). These gloves contain organic additives that enable 81-90% biodegradation in landfill conditions (ASTM D5526).</p>
-              <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-primary-500 mb-2">The Problem</h4>
-                  <ul class="list-disc pl-5 text-gray-600">
-                    <li>21.5 tons of daily medical waste in UAE hospitals</li>
-                    <li>Single-use gloves take 100+ years to decompose</li>
-                    <li>Major contributor to long-term landfill pollution</li>
-                  </ul>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-primary-500 mb-2">Our Solution</h4>
-                  <ul class="list-disc pl-5 text-gray-600">
-                    <li>Biodegradable gloves degrade in 1-5 years</li>
-                    <li>81-90% biodegradation in 490 days (ASTM D5526)</li>
-                    <li>Maintains EN 455, EN 374, AQL 1.5 standards</li>
-                  </ul>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-primary-500 mb-2">UAE-Specific Benefits</h4>
-                  <ul class="list-disc pl-5 text-gray-600">
-                    <li>Works in UAE's hot, dry landfill conditions</li>
-                    <li>Future integration with date palm biopolymers</li>
-                    <li>Supports UAE Vision 2030 sustainability goals</li>
-                  </ul>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-primary-500 mb-2">Strategic Impact</h4>
-                  <ul class="list-disc pl-5 text-gray-600">
-                    <li>Reduces long-term landfill impact</li>
-                    <li>No workflow changes needed</li>
-                    <li>Potential local supply chain development</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div class="mt-8 bg-green-50 p-6 rounded-xl border border-green-200">
-                <h4 class="font-bold text-primary-500 mb-3 text-center">Alignment with UAE Vision 2030 & UN SDGs</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <h5 class="font-semibold text-green-700 mb-2">UAE Vision 2030</h5>
-                    <p class="text-sm text-gray-600">Supports sustainability goals, waste reduction, and local innovation initiatives</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto mb-16 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-primary-500 transition-all duration-300">
+                <h3 class="text-2xl font-semibold mb-4">Comprehensive Waste Reduction Strategy</h3>
+                <div class="grid md:grid-cols-2 gap-6 text-left">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-primary-500 mb-2">Waste Segregation</h4>
+                    <ul class="list-disc pl-5 text-gray-600">
+                      <li>Smart color-coded bins with RFID tracking</li>
+                      <li>AI-powered waste categorization system</li>
+                      <li>Automated hazardous/non-hazardous sorting</li>
+                    </ul>
                   </div>
-                  <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <h5 class="font-semibold text-green-700 mb-2">SDG 12</h5>
-                    <p class="text-sm text-gray-600">Responsible consumption and production through biodegradable alternatives</p>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-primary-500 mb-2">Sterilization Process</h4>
+                    <ul class="list-disc pl-5 text-gray-600">
+                      <li>Autoclave treatment at 121°C for 30 minutes</li>
+                      <li>Microwave disinfection for sensitive materials</li>
+                      <li>Chemical neutralization for liquid wastes</li>
+                    </ul>
                   </div>
-                  <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <h5 class="font-semibold text-green-700 mb-2">SDG 13</h5>
-                    <p class="text-sm text-gray-600">Climate action by reducing long-term plastic pollution in landfills</p>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-primary-500 mb-2">Reprocessing System</h4>
+                    <ul class="list-disc pl-5 text-gray-600">
+                      <li>Mechanical shredding and granulation</li>
+                      <li>3D printing filament production</li>
+                      <li>Composite material manufacturing</li>
+                    </ul>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-primary-500 mb-2">Sustainability Metrics</h4>
+                    <ul class="list-disc pl-5 text-gray-600">
+                      <li>85% waste diversion from landfills</li>
+                      <li>60% reduction in carbon footprint</li>
+                      <li>40% cost savings for healthcare facilities</li>
+                    </ul>
                   </div>
                 </div>
               </div>
-</div>
-          </div>
-<!-- Detailed Solutions Section -->
- <section id="solutions" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-          <h2 class="text-3xl font-bold mb-12 text-center">Other <span class="text-primary-500">Solutions</span></h2>
-          
-          <div class="max-w-4xl mx-auto mb-16 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-primary-500 transition-all duration-300">
-              <h3 class="text-2xl font-semibold mb-4">Eco Bricks</h3>
-              <p class="text-gray-600">Our innovative eco bricks transform non-hazardous medical plastic waste into durable construction materials. By sterilizing and compressing medical packaging waste, we create sustainable building blocks that help reduce landfill waste while providing affordable housing solutions.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="col-span-3">
+                <!-- Ensure <biodegradable-gloves> is defined in your JS or replace with a regular section block -->
+                <biodegradable-gloves></biodegradable-gloves>
+              </div>
             </div>
           </div>
-<div class="max-w-4xl mx-auto mb-16 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-<div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-primary-500 transition-all duration-300">
-    <h3 class="text-2xl font-semibold mb-4">Comprehensive Waste Reduction Strategy</h3>
-    <div class="grid md:grid-cols-2 gap-6 text-left">
-      <div class="bg-gray-50 p-4 rounded-lg">
-        <h4 class="font-bold text-primary-500 mb-2">Waste Segregation</h4>
-        <ul class="list-disc pl-5 text-gray-600">
-          <li>Smart color-coded bins with RFID tracking</li>
-          <li>AI-powered waste categorization system</li>
-          <li>Automated hazardous/non-hazardous sorting</li>
-        </ul>
+        </section>
       </div>
-      <div class="bg-gray-50 p-4 rounded-lg">
-        <h4 class="font-bold text-primary-500 mb-2">Sterilization Process</h4>
-        <ul class="list-disc pl-5 text-gray-600">
-          <li>Autoclave treatment at 121°C for 30 minutes</li>
-          <li>Microwave disinfection for sensitive materials</li>
-          <li>Chemical neutralization for liquid wastes</li>
-        </ul>
-      </div>
-      <div class="bg-gray-50 p-4 rounded-lg">
-        <h4 class="font-bold text-primary-500 mb-2">Reprocessing System</h4>
-        <ul class="list-disc pl-5 text-gray-600">
-          <li>Mechanical shredding and granulation</li>
-          <li>3D printing filament production</li>
-          <li>Composite material manufacturing</li>
-        </ul>
-      </div>
-      <div class="bg-gray-50 p-4 rounded-lg">
-        <h4 class="font-bold text-primary-500 mb-2">Sustainability Metrics</h4>
-        <ul class="list-disc pl-5 text-gray-600">
-          <li>85% waste diversion from landfills</li>
-          <li>60% reduction in carbon footprint</li>
-          <li>40% cost savings for healthcare facilities</li>
-        </ul>
-      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 py-6 mt-12">
+    <div class="container mx-auto px-6 text-center text-sm text-gray-600">
+      &copy; <span id="year"></span> MediCycle. All rights reserved.
     </div>
-  </div>
-</div>
+  </footer>
 
-
-<div class="grid md:grid-cols-3 gap-8">
-<div class="col-span-3">
-              <biodegradable-gloves></biodegradable-gloves>
-            </div>
-</div>
-        </div>
-      </section>
-      
-</main>
-</body>
-</html><!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCycle | Medical Waste Sustainability Solutions</title>
-<link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                500: '#2e7d32',
-              },
-              secondary: {
-                500: '#689f38',
-              },
-              accent: {
-                500: '#8bc34a',
-              }
-}
-          }
-        }
+  <script>
+    // Small DOM-ready handlers
+    document.addEventListener('DOMContentLoaded', function () {
+      // Feather icons
+      if (window.feather) {
+        try { feather.replace(); } catch (e) { console.warn('feather replace failed', e); }
       }
-    </script>
-</head>
+
+      // Set current year in footer
+      var yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+
+      // Initialize Vanta (guarded in case it fails or scripts didn't load)
+      try {
+        if (window.VANTA && window.VANTA.NET) {
+          window.__vantaEffect = VANTA.NET({
+            el: "#vanta-bg",
+            color: 0x2e7d32,
+            backgroundColor: 0xffffff,
+            points: 10.0,
+            maxDistance: 20.0
+          });
+        }
+      } catch (err) {
+        console.warn('Vanta init failed:', err);
+      }
+    });
+  </script>
 </body>
 </html>
